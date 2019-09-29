@@ -93,7 +93,7 @@ gulp.task("image", function (done) {
         // .pipe(imageMin())
         .pipe(load.imagemin())
         // 写入文件流:将当前获取的文件,操作后写入到dist/img中.
-        .pipe(gulp.dest("./dist/img/"))
+        .pipe(gulp.dest("./dist/images/"))
     done();
 })
 
@@ -119,7 +119,7 @@ gulp.task('minify', gulp.series(gulp.parallel('js', 'css', 'html', 'image'), fun
 }));
 
 // 在进行搭建服务器时,最初压缩一遍要求的文件.
-gulp.task("server", gulp.series(gulp.parallel("js", "css", "html"), function (done) {
+gulp.task("server", gulp.series(gulp.parallel("js", "css", "html","image"), function (done) {
     //使用browser.init创建服务器位置和端口.
     browser.init({
         server: "./dist/",

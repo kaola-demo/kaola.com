@@ -1,0 +1,5 @@
+$('header a').mouseenter(function(){ $(this).css("color","#fff");}).mouseleave(function(){ $(this).css("color","#999");});
+$('.header-con ul div a').mouseenter(function(){ $('.muLuText').css("display","block");}).mouseleave(function(){ $('.muLuText').css("display","none");})
+$(".box>.link").mouseenter(function(){ $(this).css({'color':'red','background':'#fff'});$(this).next().css("display","block");$(this).children('i').removeClass('fa-chevron-down').addClass('fa-chevron-up')});
+$(".box").mouseleave(function(){ $(this).children('.link').css({'color':'#999',"background":"#000"}).children('i').removeClass('fa-chevron-up').addClass('fa-chevron-down');$(this).children(".submenu").css("display","none")});
+$(".submenu a").mouseenter(function(){ $(this).css("color","red");}).mouseleave(function(){ $(this).css("color","#000");});
