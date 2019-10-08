@@ -42,7 +42,10 @@ header{
                     left:-43px;
                     top: 36px;
                     line-height: 17px;
+                    z-index: 99;
                     display: none;
+                    background: #fff;
+                    border: 1px solid #ccc;
                 }
             }
         }
@@ -62,14 +65,18 @@ header{
             }
             .box{
                 cursor: pointer;
+                position: relative;
                 z-index: 99;
-            .submenu{display: none;
-                float: left;
-                border: 1px solid #999;
-                padding:0 10px;
-                a{
-                  cursor:pointer;
-                  color: #000;
+                .submenu{
+                    position: absolute;
+                    background: #fff;
+                    display: none;
+                    float: left;
+                    border: 1px solid #999;
+                    padding:0 10px;
+                    a{
+                    cursor:pointer;
+                    color: #000;
                 }
             }
             }
@@ -183,6 +190,281 @@ header{
                     background-image: -webkit-image-set(url(https://haitao.nos.netease.com/6e4da089-9347-4dc2-be19-4962832a4a5c.png?imageView&thumbnail=20x0&quality=85&v=1) 1x,url(https://haitao.nos.netease.com/6e4da089-9347-4dc2-be19-4962832a4a5c.png?imageView&thumbnail=40x0&quality=85&v=1) 2x);
                 }
             }  
+        }
+        button{position: absolute;
+            background: #fff;
+            top: 20px;
+            right: 90px;
+            padding: 10px 20px;
+            color: #ff1e32 ;
+            border: 1px solid #ff1e32;
+        &:hover{background: #fff4f5}
+    }
+    }
+}
+
+// 导航栏部分
+.daoHang{
+    width: 100%;
+    height:40px;
+    .daoHang-con{
+        width: 1094px;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 9;
+        ul{ width: 164px;
+            height: 100%;
+            float: left;
+            margin-right: 30px;
+            &:hover{
+                .liBox{
+                    display: block;
+                }
+            }
+            li{
+                text-align: center;
+                font-size: 14px;
+                line-height: 45px;
+                cursor: pointer;
+                height: 100%;
+                background:#ff2850;
+                color: #fff; 
+                border: 1px solid #ff2850;
+            }
+            .liBox{
+                border: 1px solid #ff2850;
+                display: none;
+                &:hover{
+                    background: #fff;
+                    color: #ff2850;
+                    div{display: block;}
+                }
+                .box-wzj{
+                    position: absolute;
+                    z-index: 9;
+                    left: 164px;
+                    top: 40px;
+                    width: 900px;
+                    height: 462px;
+                    border: 1px solid red;
+                    display: none;
+                    .word{width: 650px;
+                        height:458px;
+                        background: #fff;
+                        float: left;
+                        .item{width: 300px;
+                           float: left;
+                           margin-left: 5px;
+                           margin-bottom: 20px;
+                        .title{
+                            height: 30px;
+                            width:300px;
+                            line-height: 30px;
+                            float: left;
+                            border-bottom: 1px solid #ccc;
+                            a{display: block;
+                            font-weight: 600;
+                            color: #000;
+                        &:hover{color:red}}
+                        }
+                       .ctgnamebox{
+                           a{  display: block;
+                               line-height: 30px;
+                               float: left;
+                               margin:0 5px;
+                               color: #000;
+                               &:hover{color:red}
+                           }
+                        }
+                       }
+                    }
+    
+                    .imgBOX{position: absolute;
+                        top: 0;
+                        right: 0;
+                          width: 280px;
+                          background: #f6f6f6;
+                          float: left;
+                          a{
+                        margin: 5px;
+                    }
+                    }
+                    
+                }
+            }
+            
+        }  
+        ol{
+            float: left;
+            li{ position: relative;
+                float: left;
+                margin: 0 20px;
+                line-height: 40px;
+                font-size: 14px;
+                font-weight: 600;
+                a{
+                    cursor: pointer;
+                    color: #000;
+                    &:hover{
+                        color: red;
+                    }
+                }
+            
+            }
+        }  
+    }
+}
+
+// 轮播图部分
+.banner{
+       width: 100%;
+       height: 400px;
+    .swiper-container {
+        width: 100%;
+        height:400px;
+        top: -10px;
+      }
+}
+
+// 正 低 退 邮
+.zheng{margin-top: 80px;
+    width: 100%;
+    height: 147px;
+    border-top: 1px solid #ccc;
+    .zheng-con{
+        width: 1094px;
+        height: 100%;
+        margin: 0 auto;
+        .clearfix{
+            padding: 49px 0;
+            li{float: left;
+                width: 233px;
+                margin-left: 40px;
+                .btmIcon{width: 44px;
+                    height: 44px;
+                    border-radius: 50%;
+                    border: 2px solid #d6d6d6;
+                    text-align: center;
+                    line-height: 44px;
+                    font-size: 20px;
+                    font-weight: 700;
+                    display: inline-block;
+                    float: left;
+                    margin-right: 12px;}
+                .tit{font-size: 18px;
+                    font-weight: 700;
+                    line-height: 22px;
+                    display: block;
+                }
+                .desc{font-size: 14px;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+// 二维码部分
+.erWei{
+    height: 263px;
+    width: 100%;
+    .erWei-con{
+        width: 1094px;
+        height: 100%;
+        margin: 0 auto;
+        border-top: 1px solid #ccc;
+        padding: 45px 0 90px;
+        li{float: left;
+            width: 120px;
+            padding: 0 0 0 21px;
+            height: 128px;
+            dt{
+                margin: -4px 0 10px;
+                em{font-size: 18px;
+                    font-weight:400;}
+            }
+            dd{line-height: 29px;
+               a{color: #000}}
+        }
+        .item-last{
+            padding: 0;
+            text-align: center;
+            float: left;
+            margin-left: 20px;
+            font-size: 12px;
+        }
+        .first{position: relative;
+            width: 218px;
+            padding-right: 40px;
+            padding-left: 0;
+            margin-right: 48px;
+             a{display: block;}
+            .focuson{
+                 height: 32px;
+                 line-height: 32px;
+                .label{
+                     font-size: 12px;
+                     color: #000;
+                    font-weight: 100;}
+                .itm1{
+                    display: block;
+                    position: relative;
+                    &:hover{img{display: block;}}
+                    em{display: block;
+                        position: absolute;
+                        top:-30px;
+                        left: 84px;
+                    }
+                    span{
+                    img{float: left;
+                    display:none;
+                    position: absolute;
+                    top: 0;
+                    left: 47px;
+                    }
+                    }}
+                .itm2{
+                    display: block;
+                    position: relative;
+                    &:hover{img{display: block;}}
+                    em{display: block;
+                        position: absolute;
+                        top:-30px;
+                        left:132px;
+                    }
+                    span{
+                    img{
+                        float: left;
+                        display:none;
+                        position: absolute;
+                        top: 0;
+                        left: 100px;
+                    }
+                }
+                
+            }
+        }
+    }
+ }
+}
+
+// 黑色底部
+footer{
+    height: 175px;
+    width: 100%;
+    background: #333;
+    .foot-con{
+        width: 1094px;
+        height: 100%;
+        margin: 0 auto;
+        #aboutNEST {
+            position: relative;
+            padding: 20px 0;
+            line-height: 26px;
+            text-align: center;
+            a{color: #ccc}
+            span{color: #ccc}
         }
     }
 }
