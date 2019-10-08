@@ -1,0 +1,516 @@
+section {
+    width: 1094px;
+    height: 976px;
+    margin: auto;
+    position: relative;
+}
+
+#cartbox {
+    width: 1094px;
+    min-height: 218px;
+    position: relative;
+
+    .hide {
+        display: none;
+        width: 260px;
+        height: 48px;
+        position: absolute;
+        left: 396px;
+        top: 90px;
+
+        span {
+            display: block;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    .show {
+        width: 1094px;
+        height: 427px;
+
+        h3 {
+            width: 1094px;
+            height: 32px;
+            font-size: 14px;
+            color: #333;
+            line-height: 32px;
+            margin-top: 15px;
+
+            span {
+                display: block;
+                height: 32px;
+                line-height: 32px;
+            }
+
+            span:nth-of-type(1) {
+                float: left;
+
+            }
+
+            span:nth-of-type(2) {
+                float: right;
+                font-size: 12px;
+                color: #333;
+                font-weight: 100;
+                margin: 0 10px 0 10px;
+
+            }
+
+            span:nth-of-type(3) {
+                float: right;
+                font-size: 12px;
+                color: #333;
+                font-weight: 100;
+                margin: 0 10px 0 10px;
+
+                a {
+                    margin-left: 5px;
+                }
+            }
+
+        }
+
+        .m-cartbox {
+            width: 1094px;
+            min-height: 395px;
+
+            ul {
+                width: 1092px;
+                color: #999;
+                border: 1px solid #eaeaea;
+                height: 34px;
+                line-height: 34px;
+
+                li {
+                    float: left;
+
+                }
+
+                li:nth-of-type(1) {
+                    width: 114px;
+                    height: 34px;
+                    padding: 0 10px;
+                }
+
+                li:nth-of-type(2) {
+                    width: 402px;
+                    height: 34px;
+                    padding: 0 10px;
+                }
+
+                li:nth-of-type(3) {
+                    width: 130px;
+                    height: 34px;
+                    padding: 0 10px;
+                }
+
+                li:nth-of-type(4) {
+                    width: 127px;
+                    height: 34px;
+                    padding: 0 10px;
+                }
+
+                li:nth-of-type(5) {
+                    width: 108px;
+                    height: 34px;
+                    padding: 0 10px;
+                }
+
+                li:nth-of-type(6) {
+                    width: 93px;
+                    height: 34px;
+                    padding: 0 7px;
+                }
+            }
+
+            #clone {
+                width: 1094px;
+                height: 247px;
+                position: relative;
+                margin-top: 15px;
+                color: #333;
+                display: none;
+                h5 {
+                    width: 1085px;
+                    height: 21px;
+                    padding: 7px 0 8px 10px;
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: #333;
+                }
+
+                .goods {
+                    width: 1092px;
+                    height: 209px;
+
+                    .m-goods {
+                        width: 1092px;
+                        height: 171px;
+
+                        .m-goods-top {
+                            width: 1092px;
+                            height: 30px;
+                            position: relative;
+                            padding: 10px 0;
+                            font-size: 14px;
+                            height: 30px;
+                            line-height: 30px;
+                            overflow: hidden;
+
+                            .manjian {
+                                height: 30px;
+                                width: 68px;
+                                margin-right: 5px;
+                                left: -1px;
+                                top: 10px;
+                                float: left;
+                                min-width: 68px;
+                                height: 30px;
+                                padding: 0 4px;
+                                line-height: 30px;
+                                text-align: center;
+                                font-size: 14px;
+                                background-repeat: no-repeat;
+                                background-size: 100% 100%;
+                                color: #fff;
+                               background: red;
+                            }
+
+                            span:nth-of-type(1) {
+                                display: block;
+                                width: 300px;
+                                height: 32px;
+                                color: #e31436;
+                                font-size: 14px;
+
+                                a {
+                                    font-size: 12px;
+                                    color: blue;
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+
+                        .m-goods-main {
+                            width: 1092px;
+                            height: 80px;
+                            padding: 20px 0;
+                            background-color: #fffbf0;
+                            position: relative;
+                            border: 0;
+
+                            li {
+                                float: left;
+                                padding: 0 10px;
+                                height: 80px;
+                            }
+
+                            li:nth-of-type(1) {
+                                float: none;
+                                display: table-cell;
+                                padding-right: 0;
+                                width: 37px;
+                                position: relative;
+                                z-index: 100;
+                                vertical-align: middle;
+                            }
+
+                            li:nth-of-type(2) {
+                                float: none;
+                                display: table-cell;
+                                padding: 0;
+                                width: 510px;
+                                position: relative;
+                                z-index: 100;
+                                vertical-align: middle;
+                                overflow: hidden;
+
+                                a {
+                                    float: left;
+                                    display: block;
+                                    width: 80px;
+                                    height: 80px;
+
+                                    img {
+                                        display: block;
+                                        width: 80px;
+                                        height: 80px;
+                                    }
+                                }
+
+                                .miao {
+                                    margin-left: 15px;
+                                    width: 220px;
+                                    padding-right: 30px;
+                                    float: left;
+
+                                    em {
+                                        display: block;
+                                        line-height: 24px;
+                                    }
+                                    em:nth-of-type(2){
+                                        color: black;
+                                    }
+                                }
+                            }
+
+                            li:nth-of-type(3) {
+                                float: none;
+                                display: table-cell;
+                                width: 88px;
+                                position: relative;
+                                z-index: 100;
+                                vertical-align: top;
+
+                                i {
+                                    display: block;
+                                    font-size: 12px;
+                                    color: #999;
+                                }
+
+                                i:nth-of-type(1) {
+                                    text-decoration: dashed;
+                                    margin-bottom: -20px;
+                                }
+                            }
+
+                            li:nth-of-type(4) {
+                                float: none;
+                                display: table-cell;
+                                width: 103px;
+                                text-align: center;
+                                position: relative;
+                                z-index: 100;
+                                vertical-align: top;
+
+                                span {
+                                    float: left;
+                                    width: 20px;
+                                    height: 20px;
+                                    line-height: 20px;
+                                    text-align: center;
+                                    cursor: pointer;
+                                    text-decoration: none;
+                                    border: 1px solid #bcbcbc;
+                                    color: #333;
+                                    font-family: iconfont;
+                                }
+
+                                input {
+                                    float: left;
+                                    width: 43px;
+                                    height: 20px;
+                                    line-height: 20px;
+                                    text-align: center;
+                                    border: 1px solid #bcbcbc;
+                                    border-width: 1px 0;
+                                }
+                            }
+
+                            li:nth-of-type(5) {
+                                float: none;
+                                display: table-cell;
+                                width: 172px;
+                                position: relative;
+                                z-index: 100;
+                                vertical-align: top;
+
+                                span {
+                                    display: block;
+                                }
+
+                                span:nth-of-type(1) {
+                                    font-weight: 700;
+                                    font-size: 14px;
+                                    text-align: center;
+                                }
+
+                                span:nth-of-type(2) {
+                                    height: 20px;
+                                    line-height: 18px;
+                                    white-space: nowrap;
+                                    text-align: center;
+                                }
+                            }
+
+                            li:nth-of-type(6) {
+                                float: none;
+                                display: table-cell;
+                                position: relative;
+                                z-index: 100;
+                                vertical-align: top;
+                                width: 93px;
+                                padding: 0 7px;
+                                text-align: left;
+
+                                span {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+
+                    .cartinfo {
+                        width: 1029px;
+                        height: 18px;
+                        padding: 10px 43px 10px 20px;
+                        text-align: right;
+                        white-space: nowrap;
+
+                        span {
+                            display: block;
+                            margin: 0 5px 0 5px;
+                            float: right;
+                            height: 18px;
+                            line-height: 18px;
+                            font-size: 12px;
+                            color: #333;
+                        }
+                    }
+                }
+            }
+
+            .totalbox {
+                width: 1072px;
+                min-height: 40px;
+                position: relative;
+                margin-top: 35px;
+                border: 1px solid #eaeaea;
+                padding: 10px;
+
+                .totalbox-left {
+                    width: 155px;
+                    height: 40px;
+                    float: left;
+                    input {
+                        margin-top: 15px;
+                        float: left;
+                    }
+
+                    em {
+                        display: block;
+                        float: left;
+                        height: 40px;
+                        line-height: 40px;
+                        margin: 0 5px 0 5px;
+                    }
+
+                    em:nth-of-type(1) {
+                        font-size: 16px;
+                    }
+
+                    em:nth-of-type(2) {
+                        font-size: 12px;
+                        color: #333;
+                    }
+                }
+
+                .totalbox-right {
+                    width: 432px;
+                    height: 32px;
+                    float: right;
+                    padding-right: 140px;
+                    line-height: 20px;
+                    text-align: right;
+                    div:nth-of-type(1){
+                        width: 432px;
+                        height: 27px;
+                        span{
+                            float: right;
+                            margin: 0 10px 0 10px;
+                        }
+                    }
+                    div:nth-of-type(2){
+                        width: 432px;
+                        height: 20px;
+                        span{
+                            float: right;
+                            margin: 0 15px 0 15px;
+                        }
+                    }
+                    a{
+                        display: block;
+                        position: absolute;
+                        right: -1px;
+                        top: -1px;
+                        bottom: 0;
+                        width: 120px;
+                        line-height: 60px;
+                        text-align: center;
+                        background-color: #e31436;
+                        color: #fff;
+                        font-size: 18px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#j-listguess {
+    width: 1094px;
+    height: 379px;
+
+    h4 {
+        font-weight: 700;
+        height: 38px;
+        line-height: 38px;
+        color: #333;
+        font-size: 18px;
+        padding: 10px 0;
+
+        span:nth-of-type(1) {
+            font-weight: 900;
+        }
+
+        span:nth-of-type(2) {
+            font-size: 12px;
+            color: #333;
+            font-weight: 100;
+        }
+    }
+
+    ul {
+        width: 1109px;
+        height: 321px;
+        margin-left: -15px;
+        list-style: none;
+
+        li {
+            float: left;
+            margin-left: 15px;
+            margin-bottom: 15px;
+            width: 204px;
+            height: 304px;
+            border: 1px solid #eaeaea;
+
+            a {
+                display: block;
+                width: 204px;
+                height: 204px;
+
+                img {
+                    display: block;
+                    width: 204px;
+                    height: 204px;
+                }
+            }
+
+            p {
+                width: 174px;
+                margin-bottom: 9px;
+                padding: 0 15px;
+                height: 40px;
+                overflow: hidden;
+            }
+
+            em {
+                width: 174px;
+                height: 39px;
+                padding: 0 15px;
+            }
+        }
+    }
+}

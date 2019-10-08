@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link href="http://www.jq22.com/jquery/font-awesome.4.6.0.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/iconfont.css">
+    <link rel="stylesheet" href="//haitao.nos.netease.com/eb51812a-63f4-42d4-ba23-5e7406f859be_16_16.ico">
+    <link rel="stylesheet" href="./css/address-picker.css">
+    <link rel="stylesheet" href="./css/productDetails.css">
+    <!-- 样式记得自己引 -->
+</head>
+
+<body>
+    <header>
+        <!-- 头部黑色导航栏 -->
+    </header>
+    <div class="logo">
+        <!-- logo存放区 -->
+    </div>
+    <div>
+        <!--导航栏部分 -->
+    </div>
+
+
+    <!-- 商品详情区域展示 -->
+    <div id="container">
+        <!-- 产品分类路径，当前商品的所处的分类。 -->
+        <div id="productClass">
+            <div>总分类</div>
+            <span>></span>
+            <!-- 一级分类 -->
+            <ul id="accordion-one" class="accordion">
+                <li class="box">
+                    <div class="link">一级分类
+                        <i class="fa fa-chevron-down"></i>
+                    </div>
+                    <ul class="submenu">
+                        <li>
+                            <a href="#">Photoshop</a>
+                        </li>
+                        <li>
+                            <a href="#">HTML</a>
+                        </li>
+                        <li>
+                            <a href="#">HTML</a>
+                        </li>
+                        <li>
+                            <a href="#">HTML</a>
+                        </li>
+                        <li>
+                            <a href="#">HTML</a>
+                        </li>
+                        <li>
+                            <a href="#">HTML</a>
+                        </li>
+                        <li>
+                            <a href="#">HTML</a>
+                        </li>
+                        <li>
+                            <a href="#">HTML</a>
+                        </li>
+                        <li>
+                            <a href="#">CSS</a>
+                        </li>
+                        <li>
+                            <a href="#">Maquetacion web</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <span>></span>
+            <!-- 二级分类 -->
+            <ul id="accordion-two" class="accordion">
+                <li class="box">
+                    <div class="link">二级分类
+                        <i class="fa fa-chevron-down"></i>
+                    </div>
+                    <ul class="submenu">
+                        <li>
+                            <a href="#">Photoshop</a>
+                        </li>
+                        <li>
+                            <a href="#">HTML</a>
+                        </li>
+                        <li>
+                            <a href="#">HTML</a>
+                        </li>
+                        <li>
+                            <a href="#">HTML</a>
+                        </li>
+                        <li>
+                            <a href="#">HTML</a>
+                        </li>
+                        <li>
+                            <a href="#">HTML</a>
+                        </li>
+                        <li>
+                            <a href="#">HTML</a>
+                        </li>
+                        <li>
+                            <a href="#">HTML</a>
+                        </li>
+                        <li>
+                            <a href="#">CSS</a>
+                        </li>
+                        <li>
+                            <a href="#">Maquetacion web</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <span>></span>
+            <!-- 三级分类 -->
+            <ul id="accordion-three" class="accordion">
+                <li class="box">
+                    <div class="link">三级分类
+                        <i class="fa fa-chevron-down"></i>
+                    </div>
+                    <ul class="submenu">
+                        <li>
+                            <a href="#">Photoshop</a>
+                        </li>
+                        <li>
+                            <a href="#">HTML</a>
+                        </li>
+                        <li>
+                            <a href="#">HTML</a>
+                        </li>
+                        <li>
+                            <a href="#">HTML</a>
+                        </li>
+                        <li>
+                            <a href="#">HTML</a>
+                        </li>
+                        <li>
+                            <a href="#">HTML</a>
+                        </li>
+                        <li>
+                            <a href="#">HTML</a>
+                        </li>
+                        <li>
+                            <a href="#">HTML</a>
+                        </li>
+                        <li>
+                            <a href="#">CSS</a>
+                        </li>
+                        <li>
+                            <a href="#">Maquetacion web</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <span>></span>
+            <div>商品描述</div>
+            <!-- 待加 -->
+        </div>
+        <ul id="fudong">
+            <li>
+                <a href="">签到</a>
+            </li>
+            <li>
+                <a href="http://localhost:8080/shoppingCart.html">购物车<em></em></a>
+            </li>
+            <li>
+                <a href="">App</a>
+            </li>
+            <li>
+                <a href="">TOP</a>
+            </li>
+        </ul>
+        <!-- 放大镜区域 -->
+        <div id="magnify">
+            <!-- 左侧区域 -->
+            <div id="sidebar_l">
+                <!-- 创建放大镜的小图片区域和模态框区域 -->
+                <div id="smallBox">
+                    <img id="smallImg" src="./images/productDetails-001.jpg" alt="">
+                    <!-- 创建模态框，用于鼠标设置放大区域 -->
+                    <div id="mask"></div>
+                </div>
+                <!-- 创建放大镜的放大展示区域 -->
+                <div id="bigBox">
+                    <!-- 创建大图片 -->
+                    <img id="bigImg" src="./images/productDetails-001.jpg" alt="">
+                </div>
+                <div id="imgList">
+                    <span class="btnl btn" id="btnl"></span>
+                    <span class="btnr btn" id="btnr"></span>
+                    <div class="conbox" id="BoxUl">
+                        <ul>
+                            <li class="cur">
+                                <img src="./images/productDetails-001.jpg" alt="" />
+                            </li>
+                            <li class="cur">
+                                <img src="./images/productDetails-002.jpg" alt="" />
+                            </li>
+                            <li class="cur">
+                                <img src="./images/productDetails-003.jpg" alt="" />
+                            </li>
+                            <li class="cur">
+                                <img src="./images/productDetails-004.jpg" alt="" />
+                            </li>
+                            <li class="cur">
+                                <img src="./images/productDetails-005.jpg" alt="" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 右侧区域 -->
+            <div id="sidebar_r">
+                <dt class="orig-country">
+                    <img src="./images/productDetails-008.png">
+                    <span>澳大利亚</span>
+                    <span class="split">|</span>
+                    <a class="brand" target="" href="#">Hola 赫拉</a>
+                </dt>
+                <dt class="product-title">【第2支1元，第30元】HOLA赫拉寡肽原液&nbsp;淡化修复痘印面部精华液</dt>
+                <dt class="subTit">张韶涵大力推荐，痘痘肌的福音来啦，女神也爱的原液，本品淡化痘印痘痕，提升肌肤自我修护力</dt>
+                <dd class="price-group">
+                    <div class="price-top">
+                        <span>售价</span>
+                        <span>￥<em>89.00</em></span>
+                        <span>4.5折</span>
+                        <span>特价</span>
+                        <span>参考价￥198.00</span>
+                    </div>
+                    <div class="price-more">
+                        <span>更多组合</span>
+                        <ul id="price-ul">
+                            <li><span>
+                                    淡化痘印原液|89元
+                                </span></li>
+                            <li><span>
+                                    补水原液|89元
+                                </span></li>
+                            <li><span>
+                                    赋活紧致原液|108元
+                                </span></li>
+                            <li><span>
+                                    亮白原液|89元
+                                </span></li>
+                            <li><span>
+                                    淡化黑眼圈原液|89元
+                                </span></li>
+                            <li><span>
+                                    控油净痘原液|82元
+                                </span></li>
+                        </ul>
+                        <span>
+                            <span id="spanBtn">展开</span>
+                        </span>
+                    </div>
+                    <div class="price-discount">
+
+                    </div>
+                </dd>
+
+                <dd class="activity">
+                    <span class="activity-0">活动</span>
+                    <div class="activity-1">
+                        <div class="activity-2">
+                            <div class="activity-3">
+                                <div>
+                                    <span>满额减</span>
+                                </div>
+                                <span>满178减88，满267减177 </span>
+                            </div>
+                        </div>
+                    </div>
+                </dd>
+                <dd class="carriage">
+                    <span>
+                        运费
+                    </span>
+                    <div class="address">
+                        <span>金华</span>
+                        <span>至</span>
+                        <div class="addressSelect">
+                            <span id="test" style="cursor:pointer;">选择地址</span>
+                            <div class="triangle"></div>
+                        </div>
+                        <em>
+                            所选地区免运费
+                        </em>
+                    </div>
+
+                </dd>
+                <dd class="fuwu">
+                    <span>服务</span>
+                    <span>
+                        本商品由 某某提供
+                    </span>
+                    <div>
+                        <ul></ul>
+                    </div>
+                    <div></div>
+                </dd>
+                <dd class="number">
+                    <em>数量</em>
+                    <div class="numCutAdd">
+                        <a href="#">-</a>
+                        <input type="text" value="1">
+                        <a href="#">+</a>
+                    </div>
+                </dd>
+                <dd class="shuoming">
+                    <div class="buynowonly-wrap">
+                        <span>说明</span>
+                        <ul>
+                            <li>正品保障</li>
+                            <li>支持7天无理由退货</li>
+                            <li>赠运费险</li>
+                        </ul>
+                    </div>
+                    <div class="buyBtns">
+                        <a href="">
+                            立即购买
+                        </a>
+                        <a href="">
+                            加入购物车
+                        </a>
+                        <a href="">
+                            收藏
+                        </a>
+                    </div>
+                </dd>
+                <dd class="m-comment-bar">
+                    <span>.....</span>
+                    <span><em></em>%</span>
+                    <span><em></em>人评价</span>
+                    <span><em></em>人晒单</span>
+                </dd>
+                <dd class="m-excelComm">
+                    <h3>奥斯卡的复合卡</h3>
+                    <p>
+                        第一次买他们家的产品，不知道虾青素效果怎样，用了再来评价。不过整体包装还挺好看的。快递也很快，下单第二天就收到了。
+                    </p>
+                </dd>
+            </div>
+        </div>
+        <!-- 相关推荐区域 -->
+        <div id="recommend">
+            <div class="recommend-top">
+                相关推荐
+            </div>
+            <div class="recommend-main">
+                <ul>
+                    <li>
+                        <img src="//pop.nosdn.127.net/3bfb91e8-0147-43a4-8e55-6cd2dc478838?imageView&thumbnail=430x0&quality=85"
+                            alt="">
+                        <span>【第2支1元，第3支0元】HOLA赫拉玻尿酸补水原液 补水保湿 收缩毛孔面部精华液</span>
+                        <span>商品价格</span>
+                    </li>
+                    <li>
+                        <img src="//pop.nosdn.127.net/b7de0cd9-b8c6-4d1b-ae8b-67543ad0be70?imageView&thumbnail=430x0&quality=85"
+                            alt="">
+                        <span>【一键美颜】HOLA赫拉牛奶多效保湿懒人素颜霜 滋润遮瑕 补水保湿面霜</span>
+                        <span>商品价格</span>
+                    </li>
+                    <li>
+                        <img src="//pop.nosdn.127.net/1cfc8166-9a94-4b60-99e5-88d62c3d327e?imageView&thumbnail=430x0&quality=85"
+                            alt="">
+                        <span>【第2支10元，第3支1元】HOLA赫拉寡肽原液 淡化修复痘印面部精华液</span>
+                        <span>商品价格</span>
+                    </li>
+                    <li>
+                        <img src="//pop.nosdn.127.net/79dd759e-7483-4a3b-9447-d323f845b6e2?imageView&thumbnail=430x0&quality=85"
+                            alt="">
+                        <span>【第2件19元，第3件仅1元】HOLA赫拉海藻补水保湿面膜贴10片装</span>
+                        <span>商品价格</span>
+                    </li>
+                    <li>
+                        <img src="//pop.nosdn.127.net/d0bc7059-a2fd-470e-9d4f-0d50f926b9c7?imageView&thumbnail=430x0&quality=85"
+                            alt="">
+                        <span>【第2支1元，第3支0元】HOLA赫拉海藻控油净痘精华液15ml</span>
+                        <span>商品价格</span>
+                    </li>
+                    <li>
+                        <img src="//pop.nosdn.127.net/52245e3b-477c-4ab9-a29c-a88d66694bc7?imageView&thumbnail=430x0&quality=85"
+                            alt="">
+                        <span>【第2支1元，第3支0元】HOLA赫拉玻尿酸补水原液 补水保湿 收缩毛孔面部精华液</span>
+                        <span>商品价格</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 底部主体内容区域 -->
+        <div id="content">
+            <!-- 左侧看了又看区域 -->
+            <div id="moreLook">
+                <div class="dianPu">
+                    <div class="dianpupic">
+                        <img src="//pop.nosdn.127.net/d85ca35a-2c2a-4777-ae42-51b9e3598941?imageView&thumbnail=90x0&quality=85"
+                            alt="">
+                    </div>
+                    <span>
+                        店铺名称
+                        <button>
+                            进店看看
+                        </button>
+                    </span>
+                </div>
+                <div class="paihang">
+                    <h2>热销排行榜</h2>
+                    <ul>
+                        <li>
+                            <i>1</i>
+                            <span>
+                                <img src="//pop.nosdn.127.net/d48d7103-a3f3-4373-a112-96a80953b18e?imageView&thumbnail=158x0&quality=85"
+                                    alt="">
+                            </span>
+                            <p>【第2支1元，第3支0元】HOLA赫拉虾青素赋活修护精华液</p>
+                            <em>价格</em>
+                        </li>
+                        <li>
+                            <i>1</i>
+                            <span>
+                                <img src="//pop.nosdn.127.net/d48d7103-a3f3-4373-a112-96a80953b18e?imageView&thumbnail=158x0&quality=85"
+                                    alt="">
+                            </span>
+                            <p>【第2支1元，第3支0元】HOLA赫拉虾青素赋活修护精华液</p>
+                            <em>价格</em>
+                        </li>
+                    </ul>
+                    <h2>看了又看</h2>
+                    <ul>
+                        <li>
+                            <span>
+                                <img src="//pop.nosdn.127.net/d48d7103-a3f3-4373-a112-96a80953b18e?imageView&thumbnail=158x0&quality=85"
+                                    alt="">
+                            </span>
+                            <p>【第2支1元，第3支0元】HOLA赫拉虾青素赋活修护精华液</p>
+                            <em>价格</em>
+                        </li>
+                        <li>
+                            <i>1</i>
+                            <span>
+                                <img src="//pop.nosdn.127.net/d48d7103-a3f3-4373-a112-96a80953b18e?imageView&thumbnail=158x0&quality=85"
+                                    alt="">
+                            </span>
+                            <p>【第2支1元，第3支0元】HOLA赫拉虾青素赋活修护精华液</p>
+                            <em>价格</em>
+                        </li>
+                    </ul>
+                    <h2>看了最终买</h2>
+                    <ul>
+                        <li>
+                            <span>
+                                <img src="//pop.nosdn.127.net/d48d7103-a3f3-4373-a112-96a80953b18e?imageView&thumbnail=158x0&quality=85"
+                                    alt="">
+                            </span>
+                            <p>【第2支1元，第3支0元】HOLA赫拉虾青素赋活修护精华液</p>
+                            <em>价格</em>
+                        </li>
+                        <li>
+                            <i>1</i>
+                            <span>
+                                <img src="//pop.nosdn.127.net/d48d7103-a3f3-4373-a112-96a80953b18e?imageView&thumbnail=158x0&quality=85"
+                                    alt="">
+                            </span>
+                            <p>【第2支1元，第3支0元】HOLA赫拉虾青素赋活修护精华液</p>
+                            <em>价格</em>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+            <!-- 右侧商品详情和用户评价 -->
+            <div id="main">
+                <div id="contentbtn">
+                    <li>商品详情</li>
+                    <li>用户评价<span></span></li>
+                    <li>手机购买<span>二维码</span></li>
+                </div>
+                <!-- 商品详情区域 -->
+                <div id="productList">
+                    <table width="890px" height="86px" border="1px">
+                        <thead>
+                            <tr align="center">
+                                <td>关键属性</td>
+                            </tr>
+                        </thead>
+                        <tr align="center">
+                            <td width="100px">功能</td>
+                            <td width="345px">延缓氧化 缓解皱纹</td>
+                            <td width="100px">适合肤质</td>
+                            <td width="345px"> 任何肤质</td>
+                        </tr>
+                    </table>
+                    <table width="890px" height="217px" border="1px">
+                        <thead>
+                            <tr align="center">
+                                <td>其他属性</td>
+                            </tr>
+                        </thead>
+                        <tr align="center">
+                            <td width="100px">质地</td>
+                            <td width="345px"> 其他</td>
+                            <td width="100px">适用部位</td>
+                            <td width="345px"> 面部细纹 面部</td>
+                        </tr>
+                        <tr align="center">
+                            <td width="100px">产品类型</td>
+                            <td width="345px"> 面部精华</td>
+                            <td width="100px">适用群体</td>
+                            <td width="345px"> 所有人群</td>
+                        </tr>
+                        <tr align="center">
+                            <td width="100px">包装</td>
+                            <td width="345px"> 瓶装</td>
+                            <td width="100px">品名</td>
+                            <td width="345px">虾青素赋活修护精华液</td>
+                        </tr>
+                        <tr align="center">
+                            <td width="100px">主要成分</td>
+                            <td width="345px"> ASTABIO虾青素</td>
+                            <td width="100px">使用年龄</td>
+                            <td width="345px"> 50岁以上 18-35岁 35-50岁</td>
+                        </tr>
+                    </table>
+                    <div class="m-faketips f-hkdn">
+                        <div class="icon">真</div>
+                        <div class="cont">
+                            <p class="tit">正品保障</p>
+                            <p class="info">考拉海购每一件商品都通过严苛的品质把关，保障正品，保障品质。杜绝一切假货，让您无忧购物。</p>
+                        </div>
+                    </div>
+                    <div class="m-textarea">
+                        <div class="textareabox" id="textareabox"
+                            data-lazyload="//haitao.nos.netease.com/0d9dcde3-bab8-4c3a-87fd-47f253eb78dd.gif">
+                            <img src="//pop.nosdn.127.net/64e19ba4-be72-40fe-8836-58f483cf4021?imageView&thumbnail=710x0&quality=95"
+                                alt="">
+                        </div>
+                    </div>
+
+                    <div id="bottomrule" class="packdate">
+                        <div class="txt">
+                            <p style="color: black;font-weight: 900;text-align: center;">包装与生产日期</p>
+                            <p>因跨境商品经常更换包装和附件，估可能存在页面更新不及时的情况，敬请谅解!详情页里的商品参数、图片、功能、及附件仅供参考，具体请您以收到的实物为准。部分国家或地区更注重商品包装的环保和便捷性，故您收到的商品包装可能较为简单。如产自欧美，日韩的化妆品，大部分无外盒，不塑封，开口处也无封口贴;大部分国际一线品牌、奢
+                                侈品的包装也很简单。</p>
+                            <p>跨境商品包装上一般不会单独标识保质期期限，
+                                通常只在产品包装上标注生产日期或有效日期，也存在只标注出厂批号的情况:比如日本和欧洲的洗护品，化妆品(有些品牌可以根据批号读取日期，在此不做一-列举)
+                                。另部分商品喷印的日期，在运输过程中因为摩擦碰撞很容易糊掉或碰掉，属正常现象。请谅解并请您放心，考拉海购销售的跨境商品都是符台原产地规定的合格产品。</p>
+                            <p>各国家或地区商品有效期的书写方式，可在考拉pc页面底部新手指南常见问题中查看详情。跨境食品一般表示"Best
+                                beforedate",即最佳常味日期。该日期不是“最终保质期"，意为在此日期前食用能保证食物新鲜，故在"最佳赏味日期”前食用风味更佳。</p>
+                            <p style="color: black;font-weight: 900;text-align: center;">价格说明</p>
+                            <p>1.划线价、参考价:商品展示的划线价或参考价可能是品牌专柜价、商品吊牌价或由品牌供应商提供的正品零售价(如厂商指导
+                                价、建议零售价等)或该商品在考拉上曾经展示过的销售价;由于地区、时间的差异性和市场行情的波动，品牌专柜标价、商品吊牌价等可能会与您购物时展示的不一致，该价格仅供您参考。</p>
+                            <p>
+                                1.划线价、参考价:商品展示的划线价或参考价可能是品牌专柜价、商品吊牌价或由品牌供应商提供的正品零售价(如厂商指导
+                                价、建议零售价等)或该商品在考拉上曾经展示过的销售价;由于地区、时间的差异性和市场行情的波动，品牌专柜标价、商品吊牌价等可能会与您购物时展示的不一致，该价格仅供您参考。
+                            </p>
+                            <p>
+                                3.考拉价:考拉非会员用户购买的商品详情页显示的售价，是非会员用户最终决定是否购买该商品的依据。
+                            </p>
+                            <p>
+                                4.会员价:在考拉价的基础上给予会员用户的优惠价格，仅会员用户可以会员价购买该商品。
+                            </p>
+                            <p>
+                                5.工厂价:该产品在工厂生产完成后直供考拉全球工厂店，由工厂店销售给用户的价格，该价格已省去品牌溢价、广告成本、中
+                                间商差价等费用。
+                            </p>
+                            <p>
+                                6.折扣:页面显示的“折扣”为考拉价与划线价的对比(该值四舍五入后采小数点后2位，如￥199/￥369=0.5392-5.4折)，该对
+                                比值仅供您参考，不作为计算考拉价的依据。
+                            </p>
+                            <p>
+                                7.价格异常:因可能存在系统缓存、页面更新延迟等不确定性情况，导致价格显示异常，商品具体售价请以订单结算页价格为
+                                准。如您发现异常情况出现，请立即联系我们补正，以便您能顺利购物。
+                            </p>
+                            <p style="color: black;font-weight: 900;text-align: center;">
+                                消费者告知书
+                            </p>
+                            <p>
+                                尊敬的客户:
+                            </p>
+                            <p>
+                                您好!为帮助您更好地选购境外商品，请您在购买前务必认真、详细阅读并完全理解本告知书的全部内容，并对自身风险承担做出客观判断。同意本告知书内容后再下单购买:
+                            </p>
+                            <p>
+                                1.您在考拉海购上购买的跨境商品等同于境外购买，商品本身可能无中文标签，如有需要，您可以通过商品详情页查看相关商品
+                                标签中文翻译或联系客服。
+                            </p>
+                            <p>
+                                2根据相关法律政策，您选购的跨境商品仅限个人自用，不得进行再次销售，
+                            </p>
+                            <p>
+                                3.您购买的跨境商品符合原产地有关质量、安全、卫生、环保、标识等标准或技术规范要求，可能与我国标准有所不同，由此可
+                                能产生的危害、损失或者其他风险，将由您自行承担。
+                            </p>
+                            <p>
+                                4.考拉海购为平台经营者，商品均由商家向您提供，由其承担商品质量安全保证责任。
+                            </p>
+                            <p>
+                                考拉海购精选全球好货，严控每一个环节 ，为顾客提供正品保障。谢谢!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="packdate">
+                        <div class="f-hkdn">
+                            <p class="f-hkdn" style="display:inline-block;width:710px;">
+                                <a target="_blank" rel="nofollow"
+                                    href="https://pages.kaola.com/pages/activity/0b4317da69e04c6ea6babc88b1917876.shtml">
+                                    <img class="img-lazyload"
+                                        data-src="https://haitao.nos.netease.com/85ccc285-68de-480b-add5-bba3ebfdd841T1909051958_710_452.jpg"
+                                        src="https://haitao.nos.netease.com/85ccc285-68de-480b-add5-bba3ebfdd841T1909051958_710_452.jpg"
+                                        alt="正品保障" />
+                                </a>
+                            </p>
+                            <video id="qualityvedio" preload="none" loop="loop" style="width:710px;margin-left:-3px;"
+                                controls="true"
+                                poster="https://haitao.nos.netease.com/bd36db82-c819-491e-ac61-bac5f71d497bT1909051952_710_391.jpg"
+                                width="100%"
+                                src="https://haitao.nos.netease.com/2481d95a-ddef-44a0-8b27-d34a3d7d4910.mp4"></video>
+                        </div>
+                    </div>
+                </div>
+                <!-- 用户评价区域 -->
+                <div id="evaluate">
+                    <article>
+                        <div class="art-left">
+                            <div>
+                                <span>.....</span>
+                                <i>100</i>
+                                <span>%好评</span>
+                            </div>
+                        </div>
+                        <div class="art-right">
+                            <div>
+                                <span>评价送考拉豆</span>>
+                                <span>精华评价可获得40考拉豆</span>>
+                            </div>
+                            <em>
+                                发表评论
+                            </em>
+                            <em>
+                                考拉豆说明
+                            </em>
+                        </div>
+                    </article>
+                    <ul>
+                        <li><input type="radio">全部<span></span></li>
+                        <li><input type="radio">有图<span></span></li>
+                        <li><input type="radio">有追评<span></span></li>
+
+                        <li><a href="#">查看所有评价</a></li>
+                        <li><input type="checkbox">只看当前商品评价</li>
+                    </ul>
+                    <div class="commWrap">
+                        <div>
+                            <span></span>
+                            <ul>
+                                <li>12345</li>
+                                <li>
+                                    <em>精华评价</em>
+                                    物流非常快，收到以后马上拆开了，包装也非常的好，非常不错，质量也很好，产品非常好吸收不过敏，好评。
+                                </li>
+                                <li>
+                                    <img src="//haitao.nosdn2.127.net/2019071512202768a30f9757a7448d9dcc02c066ecf8c8.jpeg?klsize=3024x4032&imageView&thumbnail=75x75&quality=85"
+                                        alt="">
+                                    <img src="//haitao.nosdn2.127.net/201907151220264316fe150e2f4541b6b15737f9f3c40d.jpeg?klsize=3024x4032&imageView&thumbnail=75x75&quality=85"
+                                        alt="">
+                                    <img src="//haitao.nos.netease.com/201907151220274c300a2cc49940d0b06ead672f07ded9.jpeg?klsize=3024x4032&imageView&thumbnail=75x75&quality=85"
+                                        alt="">
+                                </li>
+                            </ul>
+                            <span>
+                                <i>点赞区域</i>
+                                <i>手机</i>
+                                <i>时间</i>
+                            </span>
+                        </div>
+                        <div>
+                            <span></span>
+                            <ul>
+                                <li>12345</li>
+                                <li>
+                                    <em>精华评价</em>
+                                    物流非常快，收到以后马上拆开了，包装也非常的好，非常不错，质量也很好，产品非常好吸收不过敏，好评。
+                                </li>
+                                <li>
+                                    <img src="//haitao.nosdn2.127.net/2019071512202768a30f9757a7448d9dcc02c066ecf8c8.jpeg?klsize=3024x4032&imageView&thumbnail=75x75&quality=85"
+                                        alt="">
+                                    <img src="//haitao.nosdn2.127.net/201907151220264316fe150e2f4541b6b15737f9f3c40d.jpeg?klsize=3024x4032&imageView&thumbnail=75x75&quality=85"
+                                        alt="">
+                                    <img src="//haitao.nos.netease.com/201907151220274c300a2cc49940d0b06ead672f07ded9.jpeg?klsize=3024x4032&imageView&thumbnail=75x75&quality=85"
+                                        alt="">
+                                </li>
+                            </ul>
+                            <span>
+                                <i>点赞区域</i>
+                                <i>手机</i>
+                                <i>时间</i>
+                            </span>
+                        </div>
+                        <div>
+                            <span></span>
+                            <ul>
+                                <li>12345</li>
+                                <li>
+                                    <em>精华评价</em>
+                                    物流非常快，收到以后马上拆开了，包装也非常的好，非常不错，质量也很好，产品非常好吸收不过敏，好评。
+                                </li>
+                                <li>
+                                    <img src="//haitao.nosdn2.127.net/2019071512202768a30f9757a7448d9dcc02c066ecf8c8.jpeg?klsize=3024x4032&imageView&thumbnail=75x75&quality=85"
+                                        alt="">
+                                    <img src="//haitao.nosdn2.127.net/201907151220264316fe150e2f4541b6b15737f9f3c40d.jpeg?klsize=3024x4032&imageView&thumbnail=75x75&quality=85"
+                                        alt="">
+                                    <img src="//haitao.nos.netease.com/201907151220274c300a2cc49940d0b06ead672f07ded9.jpeg?klsize=3024x4032&imageView&thumbnail=75x75&quality=85"
+                                        alt="">
+                                </li>
+                            </ul>
+                            <span>
+                                <i>点赞区域</i>
+                                <i>手机</i>
+                                <i>时间</i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="pageNavWrap">
+                        <ul>
+                            <li>&lt;&lt;上一页</li>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>...</li>
+                            <li>下一页&gt;&gt;</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 猜你喜欢 -->
+                <div id="j-listguess">
+                    <h4>
+                        <span>猜你喜欢</span>
+                        <span>根据你的浏览记录推荐的商品</span>
+                    </h4>
+                    <ul class="like">
+                        <li>
+                            <span>
+                                <img src="//haitao.nosdn1.127.net/228a581eb2924bc2a951e05e05f93cfa1567563000732k04mjc9q10296.jpg?imageView&thumbnail=430x0&quality=85"
+                                    alt="">
+                            </span>
+                            <p>商品详情</p>
+                            <em>价格</em>
+                        </li>
+                        <li>
+                            <span>
+                                <img src="//haitao.nos.netease.com/b140c378c2544e65a8c576a3b81e12371567145773862jzxq4q3010139.jpg?imageView&thumbnail=430x0&quality=85"
+                                    alt="">
+                            </span>
+                            <p>商品详情</p>
+                            <em>价格</em>
+                        </li>
+                        <li>
+                            <span>
+                                <img src="//haitao.nosdn1.127.net/b60924af1ea64f1b924936b1aa4fed121561369705202jxa77iz311984.jpg?imageView&thumbnail=430x0&quality=85"
+                                    alt="">
+                            </span>
+                            <p>商品详情</p>
+                            <em>价格</em>
+                        </li>
+                        <li>
+                            <span>
+                                <img src="https://haitao.nos-hz.163yun.com/3a02e101-da0c-43e8-a86e-b57abe639772.jpg?imageView&thumbnail=430x0&quality=85"
+                                    alt="">
+                            </span>
+                            <p>商品详情</p>
+                            <em>价格</em>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 最近浏览 -->
+                <div id="j-listguess">
+                    <h4>
+                        <span>最近浏览</span>
+                        <span>你最近一段时间浏览的商品</span>
+                    </h4>
+                    <ul class="like">
+                        <li>
+                            <span>
+                                <img src="//pop.nosdn.127.net/d48d7103-a3f3-4373-a112-96a80953b18e?imageView&thumbnail=430x0&quality=85"
+                                    alt="">
+                            </span>
+                            <p>商品详情</p>
+                            <em>价格</em>
+                        </li>
+                        <li>
+                            <span>
+                                <img src="//pop.nosdn.127.net/ce5c40bf-3bb9-4fc6-95b3-f9e254af9671?imageView&thumbnail=430x0&quality=85"
+                                    alt="">
+                            </span>
+                            <p>商品详情</p>
+                            <em>价格</em>
+                        </li>
+                        <li>
+                            <span>
+                                <img src="//pop.nosdn.127.net/1cfc8166-9a94-4b60-99e5-88d62c3d327e?imageView&thumbnail=430x0&quality=85"
+                                    alt="">
+                            </span>
+                            <p>商品详情</p>
+                            <em>价格</em>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 推荐搜索 -->
+                <div id="n-recnewrecommended">
+                    <span>
+                        推荐搜索:
+                    </span>
+                    <a class="v-link" href="https://www.kaola.com/cp/828405.html" _pi="1">
+                        蜂胶液
+                    </a>
+                    <span>|</span>
+                    <a class="v-link" href="https://www.kaola.com/cp/3292.html" _pi="1">
+                        兰蔻肌底液
+                    </a>
+                    <span>|</span>
+                    <a class="v-link" href="https://www.kaola.com/cp/837759.html" _pi="1">
+                        毛孔紧致精华
+                    </a>
+                    <span>|</span>
+                    <a class="v-link" href="https://www.kaola.com/cp/1298000.html" _pi="1">
+                        补水精华安瓶
+                    </a>
+                    <span>|</span>
+                    <a class="v-link" href="https://www.kaola.com/cp/98401.html" _pi="1">
+                        黄金 精华液
+                    </a>
+                    <span>|</span>
+                    <a class="v-link" href="https://www.kaola.com/cp/731944.html" _pi="1">
+                        美白紧致精华
+                    </a>
+                    <span>|</span>
+                    <a class="v-link" href="https://www.kaola.com/cp/98494.html" _pi="1">
+                        火山
+                    </a>
+                    <span>|</span>
+                    <a class="v-link" href="https://www.kaola.com/cp/841316.html" _pi="1">
+                        欧莱雅蔡徐坤同款
+                    </a>
+                    <span>|</span>
+                    <a class="v-link" href="https://www.kaola.com/cp/125245.html" _pi="1">
+                        莎莎官方旗舰店
+                    </a>
+                    <span>|</span>
+                    <a class="v-link" href="https://www.kaola.com/cp/90680.html" _pi="1">
+                        赫莲娜精华
+                    </a>
+                    <span>|</span>
+                    <a class="v-link" href="https://www.kaola.com/cp/499.html" _pi="1">
+                        娇韵诗官方旗舰店
+                    </a>
+                    <span>|</span>
+                    <a class="v-link" href="https://www.kaola.com/cp/16095.html" _pi="1">
+                        skinceuticals
+                    </a>
+                    <span>|</span>
+                    <a class="v-link" href="https://www.kaola.com/cp/66544.html" _pi="1">
+                        护肤品露得清
+                    </a>
+                    <span>|</span>
+                    <a class="v-link" href="https://www.kaola.com/cp/603381.html" _pi="1">
+                        精华液去痘印
+                    </a>
+                    <span>|</span>
+                    <a class="v-link" href="https://www.kaola.com/cp/602193.html" _pi="1">
+                        安瓶孕妇
+                    </a>
+                    <span>|</span>
+                </div>
+                <div id="n-recnewrecommended">
+                    <h4>
+                        <span>同类目推荐</span>
+
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div>
+
+        <!-- 正 低 退 邮 部分 -->
+    </div>
+    <div>
+        <!-- 二维码部分 -->
+    </div>
+    <footer>
+        <!--黑色底部 -->
+    </footer>
+</body>
+<script src="./js/jquery1.12.4.js"></script>
+<script src="./js/address-picker.js"></script>
+<script src="./js/productDetails-map.js"></script>
+<script src="./js/productDetails.js"></script>
+
+
+
+</html>
